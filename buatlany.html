@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinta untuk Khoirotul Maulany 💕</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Georgia", serif;
+        background: linear-gradient(
+          135deg,
+          #ff9a9e 0%,
+          #fecfef 50%,
+          #fecfef 100%
+        );
+        color: #333;
+        overflow-x: hidden;
+        animation: gradientShift 10s ease infinite;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .heart {
+        position: absolute;
+        width: 20px;
+        height: 18px;
+        opacity: 0.7;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .heart:before,
+      .heart:after {
+        position: absolute;
+        content: "";
+        left: 10px;
+        top: 0;
+        width: 10px;
+        height: 16px;
+        background: #ff69b4;
+        border-radius: 10px 10px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+      }
+
+      .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      .title {
+        font-size: 3em;
+        color: #e91e63;
+        margin-bottom: 20px;
+        animation: fadeInUp 2s ease-out;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .name {
+        font-size: 2.5em;
+        color: #ff4081;
+        margin: 20px 0;
+        animation: fadeInUp 2.5s ease-out;
+        font-style: italic;
+      }
+
+      .message {
+        font-size: 1.3em;
+        line-height: 1.8;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-top: 30px;
+        animation: fadeInUp 3s ease-out;
+        border-left: 5px solid #ff69b4;
+        text-align: left;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .footer {
+        margin-top: 40px;
+        font-size: 1em;
+        color: #ff69b4;
+        animation: fadeInUp 3.5s ease-out;
+      }
+
+      /* Responsif untuk mobile */
+      @media (max-width: 600px) {
+        .title {
+          font-size: 2em;
+        }
+        .name {
+          font-size: 2em;
+        }
+        .message {
+          font-size: 1.1em;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">💖 Surat Khusus buat kamu 💖</h1>
+      <div class="name">Khoirotul Maulany</div>
+      <div class="message">
+        "haii, yupp aku sengaja bikin ini khusus buat kamu hihi. singkat ajaa
+        koo gaa banyakk, akuu cumann pengenn mengungkapkan perasaan akuu selama
+        ini. akuu udahh nyaman sama kamuu, dan kamu tau sendiri kan? akuu paling
+        gabisa yang namanya "deket doang tapi ga jadian" Karena itu bener bener
+        gaenak dan kagok gitu lahh, jadinyaa aku memutuskan untuk mengajak kamu
+        lebih dari ini atau bisa disebut dengan pacaran lah yaaa. ituu tapii
+        terserah kamuu sekiranyaa mau buat di lanjutin ke tahap itu atau tidak,
+        akuu tidaa memaksa buat kamu setuju dengan hal ini tapi kalau bisa
+        pikirkan yang terbaik. kalo untuk alasan karena "ah nanti ending nya
+        sama aja" yess, itu hanya dampak buruk yang tida ingin terjadi, maka
+        dari itu aku akan mengusahakan agar tidak ada lagi sakit hati untuk
+        hubungan yang kali ni, karna cape juga kan punya hubungan yang selalu
+        hancur , sakit hati, kekk pengen jugaa gaa sii punyaa hubungan yang
+        langgeng sampai kita lulus nantii. dahh kali yaa segitu ajaa, anddd i
+        hope you read this and give me your answer in chat. babaaaiiiii"
+      </div>
+      <div class="footer">💕 Semoga harimu ceria selalu hihihi 💕</div>
+    </div>
+
+    <script>
+      // Fungsi untuk membuat hati jatuh secara acak
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+        heart.style.animationDelay = Math.random() * 2 + "s";
+        document.body.appendChild(heart);
+
+        // Hapus hati setelah animasi selesai
+        setTimeout(() => {
+          heart.remove();
+        }, 6000);
+      }
+
+      // Buat hati setiap 500ms
+      setInterval(createHeart, 500);
+
+      // Efek typewriter sederhana untuk pesan (opsional, untuk romantis)
+      const messageText = document.querySelector(".message");
+      const originalText = messageText.innerHTML;
+      messageText.innerHTML = ""; // Kosongkan dulu
+
+      let i = 0;
+      function typeWriter() {
+        if (i < originalText.length) {
+          messageText.innerHTML += originalText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 50); // Kecepatan ketik
+        }
+      }
+
+      // Mulai typewriter setelah 2 detik
+      setTimeout(typeWriter, 2000);
+    </script>
+  </body>
+</html>
